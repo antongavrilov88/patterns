@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/patterns/builder/products/.ts"  ]
 }
