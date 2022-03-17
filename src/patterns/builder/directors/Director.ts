@@ -8,6 +8,32 @@ class Director extends AbstractDirector<AbstractProductBuilder> {
         this.builder = builder
     }
 
+    public makeMax() {
+                this.builder.addAwsomeDetail()
+                this.builder.addCoolDetail()
+                this.builder.addProductDetail()
+                this.builder.addExclMarkDetail()  
+
+    }
+
+    public makeCool() {
+                this.builder.addCoolDetail()
+                this.builder.addProductDetail()
+                this.builder.addExclMarkDetail()
+
+    }
+
+    public makeAwesome() {
+                this.builder.addAwsomeDetail()
+                this.builder.addProductDetail()
+                this.builder.addExclMarkDetail() }
+
+                public makeDefault() {
+                this.builder.addProductDetail()
+                this.builder.addExclMarkDetail()
+
+                }
+
     make(type?: string): void {
 
         // обновляем объект продукта в строителе до "пустого"
@@ -15,25 +41,13 @@ class Director extends AbstractDirector<AbstractProductBuilder> {
 
         // в зависимости от полученного типа конфигурируем продукт через вызов методов строителя
         switch (type) {
-            case 'max':
-                this.builder.addAwsomeDetail()
-                this.builder.addCoolDetail()
-                this.builder.addProductDetail()
-                this.builder.addExclMarkDetail()                
+            case 'max':              
                 break;
             case 'cool':
-                this.builder.addCoolDetail()
-                this.builder.addProductDetail()
-                this.builder.addExclMarkDetail()
                 break
             case 'awesome':
-                this.builder.addAwsomeDetail()
-                this.builder.addProductDetail()
-                this.builder.addExclMarkDetail() 
                 break
             default:
-                this.builder.addProductDetail()
-                this.builder.addExclMarkDetail()
                 break;
         }
     }

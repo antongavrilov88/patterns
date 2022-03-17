@@ -34,7 +34,7 @@ const BuilderView: React.FC = () => {
      /* просим директора создать продукт в конфигурации 'awesome'. На самом деле мы просим его проконтролировать создание этого продукта переданным строителем.
      Директор, получив тип запрашиваемого продукта, вызовет необходимые методы строителя в нужной последовательности
      */
-     director.make('awesome')
+     director.makeAwesome()
 
      /*
      Теперь мы можем попросить строителя вернуть готовый продукт
@@ -46,7 +46,7 @@ const BuilderView: React.FC = () => {
      попросить директора сделать новую конфигурацию, а после этого строитель вернет нам новый экземпляр в новой конфигурации
      */
 
-    director.make('cool')
+    director.makeCool()
     const coolProduct = builderForDirector.getResult()
 
     /*
@@ -59,7 +59,7 @@ const BuilderView: React.FC = () => {
    const priceListDirector = new Director(priceBuilderForDirector)
 
    // попросим его сделать платежную ведомость для конфигурации Awesome
-   priceListDirector.make('awesome')
+   priceListDirector.makeAwesome()
    
    const awesomePriceList = priceBuilderForDirector.getResult()
 
