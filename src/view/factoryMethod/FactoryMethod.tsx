@@ -1,7 +1,6 @@
-import { SmsMessageCreator, EmailMessageCreator } from '../../patterns/FactoryMethod/creators'
+import { EmailMessageCreator, SmsMessageCreator } from '../../patterns/FactoryMethod/creators'
 import React from "react";
 import {AbstractMessage} from "../../abstract/FactoryMethod/AbstractProduct";
-import {MessagesFactory} from "../../patterns/FactoryMethod/messagesFactory/messagesFactory";
 
 const FactoryMethod: React.FC = () => {
 
@@ -13,11 +12,10 @@ const FactoryMethod: React.FC = () => {
         </>
     }
 
-    const messagesFactory = new MessagesFactory()
+    const smsCreator = new SmsMessageCreator()
+    const emailCreator = new EmailMessageCreator()
 
-    const messageCreators = [new SmsMessageCreator(), new EmailMessageCreator()]
-
-    const messages = messageCreators.map(messagesFactory.factoryMethod)
+    const messages = [emailCreator.create('Hello world'), smsCreator.create('Goodbye world')]
 
     return (
         <>

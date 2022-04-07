@@ -5,6 +5,10 @@
  */
 
 abstract class AbstractMessage {
+    protected constructor(message: string) {
+        this.message = message
+    }
+    public readonly message: string
     public abstract send(): string
 }
 
