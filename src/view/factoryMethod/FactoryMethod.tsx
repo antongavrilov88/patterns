@@ -1,4 +1,4 @@
-import { EmailMessageCreator, SmsMessageCreator } from '../../patterns/FactoryMethod/creators'
+import { EmailMessageCreator, SmsMessageCreator } from '../../patterns/factoryMethod/creators'
 import React from "react";
 import {AbstractMessage} from "../../abstract/FactoryMethod/AbstractProduct";
 import {AbstractMessageCreator} from "../../abstract/FactoryMethod/AbstractCreator";
