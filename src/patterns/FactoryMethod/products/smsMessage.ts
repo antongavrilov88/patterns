@@ -4,9 +4,10 @@ import {AbstractMessage} from "../../../abstract/FactoryMethod/AbstractProduct";
  * каждый класс сообщения имеет метод отправки, но реализует его по разному
  */
 
-class SmsMessage extends AbstractMessage {
+class SmsMessage implements AbstractMessage {
+    public readonly message: string;
     constructor(message: string) {
-        super(message);
+        this.message = message
     }
     send(): string {
         return `Отправлено смс сообщение: ${this.message}`;
