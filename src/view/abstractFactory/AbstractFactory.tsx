@@ -31,7 +31,7 @@ const AbstractFactoryView: React.FC = () => {
 
     return (
         <>
-            Абстрактная фарика
+            Абстрактная фабрика
             <br />
             {shapesDrawer(greenFactory)}
             {shapesDrawer(redFactory)}
